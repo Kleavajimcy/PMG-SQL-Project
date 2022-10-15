@@ -1,11 +1,13 @@
----Q1
+---SOLUTION 1
 select sum(clicks) from marketing_data;
+--------------------------------------------------------------
 
----Q2
+---SOLUTION 2
 select store_location, sum(revenue) as revenue from store_revenue
 group by store_location;
+--------------------------------------------------------------
 
----Q3
+---SOLUTION 3
 select
 	marketing_data.date as date,
 	geo,
@@ -17,7 +19,7 @@ full outer join store_revenue
 on marketing_data.date = store_revenue.date and marketing_data.geo=right(store_revenue.store_location, 2);
 --------------------------------------------------------------
 
---Q4
+--SOLUTION 4
 -- More impressions and more clicks should commensurate to more revenue
 select
 	--store_revenue.store_location as store_location,
@@ -31,7 +33,7 @@ on (marketing_data.date = store_revenue.date) and (marketing_data.geo=right(stor
 group by store_revenue.store_location
 order by sum_revenue desc;
 --------------------------------------------------------------------------------------------------
---Q5
+--SOLUTION 5
 select top 10
 	marketing_data.date as date,
 	geo,
