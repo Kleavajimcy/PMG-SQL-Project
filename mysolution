@@ -21,7 +21,7 @@ on marketing_data.date = store_revenue.date and marketing_data.geo=right(store_r
 
 --SOLUTION 4
 -- In my opinion, increase in impressions and clicks should give rise to increasing revenue generation. 
--- Hence, CA Store location is the most efficient store location because they have the highest impressions and total revenue.
+-- Hence, CA Store location is the most efficient store location because they have the highest impressions and the highest total revenue.
 select
 	--store_revenue.store_location as store_location,
 	store_revenue.store_location,
